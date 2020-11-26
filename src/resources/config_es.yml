@@ -1,0 +1,202 @@
+# iShop - https://www.spigotmc.org/resources/ishop.84555/
+# The block you want to open the shop GUI
+# Shop GUI will be activated only by left or right click
+# Gracias a DINOBOSSYT ;D
+shopBlock: 'minecraft:barrel'
+
+# The block you want to open the stock GUI
+# Stock GUI will be activated only by left clicking
+stockBlock: 'minecraft:composter'
+
+# Allows the use of shop blocks. Setting to false will disable players using specified shop block to open shop GUI
+# WARNING: Setting to false will allow breaking of existing shop blocks without deleting shop!
+enableShopBlock: true
+
+# Enable more than 1 shop block adding unlimited blocks listed below if true
+# WARNING: Removing previously set blocks from this list will allow breaking of existing shop blocks without deleting shop!
+multipleShopBlocks: false
+shopBlockList:
+  - minecraft:chest
+  - minecraft:crafting_table
+
+# Allows the use of stock blocks. Setting to false will disable players using specified stock block to open stock GUI
+enableStockBlock: true
+
+# Enable more than 1 stock block adding unlimited blocks listed below if true
+multipleStockBlocks: false
+stockBlockList:
+  - minecraft:ender_chest
+  - minecraft:jukebox
+
+# Disable creating shops in worlds listed below if true
+disableShopInWorld: true
+disabledWorldList:
+  - world_nether
+  - world_the_end
+
+# This enables admin shops that don't need stock. Created by typing /shop adminshop, requires ishop.admin permission
+enableAdminShop: true
+
+# Enable clickable chest item in self owned shop gui that will access stock
+enableStockAccessFromShopGUI: true
+
+# Allows players to access the stock GUI by typing /shop stock
+# Players with ishop.stock permission will bypass if disabled
+enableStockCommand: true
+
+# Number of pages to have in the stock GUI
+stockPages: 5
+
+# Enable sending of messages when players have purchased or sold item(s) from shops
+enableShopNotifications: true
+
+# Enable sending of missed sold item(s) from shops by using command /shop sold
+enableShopSoldMessage: true
+
+# Enable sending of message when player connects if items have been sold while offline
+enableSoldNotificationOnJoin: true
+
+# Only send sold notification 1 time when players first connects until they use /shop sold clear or server restarts
+onlyNotifySoldOnceUntilClear: true
+
+# Delay time in seconds after connecting to notify player of '/shop sold'
+soldNotificationsDelayTime: 5
+
+# Automatically clear shop sold list when player reaches end of list
+autoClearSoldListOnLast: false
+
+# Enable sending of messages to shop owners if item(s) are out of stock when players try to purchase
+enableOutOfStockMessages: true
+
+# Time in seconds before shop owner receives another message about being out of stock when someone tries to buy item(s)
+noStockCooldown: 300
+
+# Require player to own at least 1 shop to access stock
+mustOwnShopForStock: true
+
+# Amount of money needed to create a shop
+# Set to 0 to disable
+createCost: 3000
+
+# Amount of money returned when deleting a shop
+# Set to 0 to disable
+returnAmount: 0.0
+
+# Amount of days a player is inactive before deleting their shops
+# Set to 0 to disable
+maxInactiveDays: 0
+
+# Delete block that the shop is located at when deleting a shop
+deleteBlock: false
+
+# Show particle effects on active shop blocks
+showParticles: true
+
+# Required to set the ishop flag in the regions for it to work
+# Only works if WorldGuard is installed
+enableWorldGuardFlag: false
+
+# Set whether you want to use permission nodes or not
+# Setting to false will allow any player to create a shop up to defaultShopLimit
+# Set to true if you have a permission plugin
+usePermissions: false
+
+# Only works if usePermissions is set to false
+# If it's set to true, then you'll need to edit the limit via permission nodes for example; ishop.create.limit.5
+# Set to -1 to disable shop limit
+defaultShopLimit: 3
+
+# Allow everyone to remotely manage their own player shops using "/shop manage <id>" command
+remoteManage: true
+
+# Allow everyone to use "/shop view <id>" command to view other players shop remotely
+remoteShopping: true
+
+# Allow everyone to use "/shop list <player>" command to view full list of given players shops with location
+publicListCommand: true
+
+# Allow everyone to use "/shop shops" command to view all found player shops
+publicShopListCommand: true
+
+# This will show admin shops when using "/shop shops" -- Requires server restart if config option changed!
+adminShopPublic: true
+
+# Setting this to false will hide shops that player owns when using command "/shop shops"
+publicShopListShowsOwned: true
+
+# Allow shop owners and admins to place item frames and signs on shop blocks when sneaking
+placeItemFrameSigns: true
+
+# Setting to true will protect shop blocks from explosions
+protectShopBlocksFromExplosions: true
+
+# Customizable Messages
+adminShop: "Tienda de administración #%id"
+adminShopDisabled: "&cSe inhabilitaron las tiendas de administración!"
+broadcastOff: "Broadcast OFF"
+broadcastOn: "Broadcast ON"
+buy: "&7Tú compraste &a %in &7for&c %out&7!"
+buyAction: "COMPRAR"
+buyTitle: "PRECIO PARA COMPRAR ARTÍCULOS [SLOT 1]"
+buyTitle2: "PRECIO PARA COMPRAR ARTÍCULOS [SLOT 2]"
+createShopTitle: "!"
+createTitle: "CREATE"
+deleteTitle: "ELIMINE"
+disabledShopBlock: "&cNo se puede crear la ubicación de la tienda cuando los bloques de la tienda están deshabilitados!"
+existingShop: "&c¡No se puede crear una tienda donde ya se encuentra una tienda existente!"
+foundShops: "&6Encontrado&a %shops &6Tiendas Para el jugador:&a %p"
+location: "&6Shop&a %id &6ubicación XYZ: "
+noItems: "&cNo tienes suficientes artículos para comprar en esta tienda.!"
+noMoney: "&c¡No tienes suficiente dinero para crear una tienda! Necesitas al menos &o$"
+noPermissions: "&c¡No tienes permiso para este comando!"
+noPlayerFound: "&cEl jugador no se puede encontrar!"
+noPlayerShop: "&c¡El nombre del jugador no existe! No se puede mostrar la tienda del jugador!"
+noRemoteManage: "&cSe ha desactivado la gestión remota de tiendas!"
+noRemoteShops: "&cSe inhabilitó la compra remota!"
+normalShop: "%player% Tienda #%id"
+noShopFound: "&cNo se puede encontrar ninguna tienda!"
+noShopStock: "&cNo se puede acceder al stock porque no tienes tiendas!"
+noStock: "&cEsta tienda está actualmente agotada de ese artículos!"
+noStockNotify: "&c¡Una de tus tiendas está agotada! &o(%s)"
+page: "Page"
+playerInventoryFull: "&c¡Tu inventario está lleno! No puedo comprar ningún artículo!"
+playerShopCreated: "&7La tienda ha sido &aCREADO&7 para&a %p &7!"
+reload: "&7Archivo de configuración recargado."
+sell: "&7%p ha comprado&7&c %in &7por &a %out&7!"
+sellTitle: "ITEMS FOR SALE [SLOT 1]"
+sellTitle2: "ITEMS FOR SALE [SLOT 2]"
+shopBusy: "&6La tienda está ocupada. Vuelve a intentarlo pronto.!"
+shopCreated: "&7La tienda objetivo ha sido &aCREADO&7!"
+shopDeleted: "&7La tienda objetivo ha sido &cELIMINADO&7!"
+shopIDDeleted: "&cTienda con la ID&a %id &cha sido ELIMINADO!"
+shopIntegerError: "&cEl ID de la tienda debe ser un número entero mayor que 0!"
+shopLimit: "&cNo tienes permiso o has alcanzado el límite de tu tienda!"
+shopNotOwned: "&cNo eres dueño de esta tienda!"
+stockCommandDisabled: "&c¡El comando /shop stock ha sido deshabilitado!"
+stockTitle: "Shop Stock Inventory"
+targetMismatch: "&cEl bloque de destino debe coincidir con el bloque de tienda establecido!"
+clickManage: "&eGESTIONAR"
+clickShop: "&eTIENDA"
+listAdminShop: "&6Listado de todas las tiendas de administración encontradas:"
+noAdminShopsFound: "&cNo se han encontrado tiendas de administración!"
+noShopBlock: "&c¡ShopBlock no puede estar vacío! el bloque es un barril."
+noStockBlock: "&c¡StockBlock no puede estar vacío! el bloque es un compostedor."
+notPlayer: "&cSolo los jugadores en el juego pueden usar comandos de tienda!"
+shopListTitle: "Shops List"
+shopNumber: "%player tienda #%id"
+shopListDisabled: "&cLa lista de tiendas ha sido deshabilitada!"
+adminShopNumber: "Admin shop #%id"
+noStockButton: "&cArtículos agotado!"
+stockIntegerError: "&cLa página de stock debe ser un número entero mayor que 0!"
+soldClear: "&6Se borró la lista de artículos vendidos de la tienda"
+soldCommandDisabled: "&cEl comando Tienda vendido ha sido deshabilitado"
+soldHeader: "&6Artículos vendidos sin conexión o el último reinicio del servidor (pagina %p):"
+soldIntegerError: "&cLa página vendida debe ser un número entero mayor que 0!"
+soldJoinNotify: "&6Tipo &a/shop sold&6 para ver los artículos vendidos o usar &a/shop sold clear"
+soldNothing: "&cNo se encontraron intercambios en la tienda sin conexión o desde el reinicio del servidor"
+soldPages: "&7Pagina %p"
+soldPagesNext: " &7>> &6Siguiente"
+soldPagesPrevious: "&6Previo &7<< "
+
+# Do not edit this!
+configVersion: 2.7
